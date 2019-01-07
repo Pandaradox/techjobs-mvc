@@ -32,13 +32,13 @@
 		    <hr/>
 	    	<table class="job-listing">
 	   			<tr th:each="field : ${item}">
-	   				<th th:if="${field.key}=='name'" th:text="${#strings.capitalizeWords(field.key)}"></th><td  th:if="${field.key}=='name'" th:text="${field.value}"></td>
-	   				<th th:unless="${field.key}=='name'" th:text="${#strings.capitalizeWords(field.key)}"></th><td th:unless="${field.key}=='name'"><a th:unless="${field.key}=='name'" th:href="@{/list/jobs(column=${field.key},value=${field.value})}" th:text="${field.value}"></a></td>
+	   				<th th:if="${field.key}=='name'" th:text="${#strings.capitalizeWords(field.key)}"></th>
+	   				<td th:if="${field.key}=='name'" th:text="${field.value}"></td>
+	   				<th th:unless="${field.key}=='name'" th:text="${#strings.capitalizeWords(field.key)}"></th>
+	   				<td th:unless="${field.key}=='name'"><a th:unless="${field.key}=='name'" th:href="@{/list/jobs(column=${field.key},value=${field.value})}" th:text="${field.value}"></a></td>
 	   			</tr>
-				<tr></tr>
 	    	</table>
 	   	</div>
     </div>
-	
 </body>
 </html>
